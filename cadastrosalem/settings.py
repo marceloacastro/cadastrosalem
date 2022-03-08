@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 
-# import dj_database_url
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
@@ -76,11 +76,12 @@ WSGI_APPLICATION = 'cadastrosalem.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# # Usando PostgreeSQL com Heroku
-# DATABASES = {
-#    'default': dj_database_url.config()
-# }
+# Usando PostgreeSQL com Heroku
+DATABASES = {
+    'default': dj_database_url.config()
+}
 
+"""""""""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -91,6 +92,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+"""""""""
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
