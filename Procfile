@@ -1,0 +1,1 @@
+web: gunicorn cadastrosalem.wsgi --log-file -

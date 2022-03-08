@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <img class="mb-4" src="http://www.comunidadesalem.com.br/templates/eximium/images/green/logo.png" alt="" width="200" height="200">
+        {% if user.is_anonymous %}
+            <div class="alert alert-primary" role="alert">
+                Favor se autenticar.
+            </div>
+            <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+        {% else %}
+            <div class="alert alert-primary" role="alert">
+                Seja bem-vindo(a) {{ user.get_full_name }}!
+            </div>
+            <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+        {% endif %}
+    </div>
+{% endblock %}
