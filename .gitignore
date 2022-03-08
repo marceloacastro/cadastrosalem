@@ -1,4 +1,7 @@
-__pycache__
-*.*_
 *.pyc
-*.idea
+*~
+__pycache__
+myvenv
+db.sqlite3
+/static
+.DS_Store
