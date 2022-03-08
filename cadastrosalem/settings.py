@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'usuarios',
+    'bootstrap4',
+    'stdimage',
 ]
 
 MIDDLEWARE = [
@@ -76,12 +78,14 @@ WSGI_APPLICATION = 'cadastrosalem.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+"""""""""
 # Usando PostgreeSQL com Heroku
 DATABASES = {
     'default': dj_database_url.config()
 }
 
 """""""""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -92,7 +96,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-"""""""""
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
