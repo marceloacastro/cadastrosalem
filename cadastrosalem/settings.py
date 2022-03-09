@@ -83,7 +83,6 @@ DATABASES = {
     'default': dj_database_url.config()
 }
 
-"""""""""
 
 DATABASES = {
     'default': {
@@ -92,6 +91,19 @@ DATABASES = {
         'USER': 'salem',
         'PASSWORD': 'S@lem2022',
         'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+
+"""""""""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'CadastroSalem',
+        'USER': 'salemcomunidade',
+        'PASSWORD': 'salem1404',
+        'HOST': 'salemcomunidade.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
