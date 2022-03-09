@@ -100,11 +100,11 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'CadastroSalem',
+        'NAME': 'salemcomunidade$CadastroSalem',
         'USER': 'salemcomunidade',
         'PASSWORD': 'salem1404',
         'HOST': 'salemcomunidade.mysql.pythonanywhere-services.com',
-        'PORT': '3306',
+        'PORT': '',
     }
 }
 
