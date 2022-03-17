@@ -98,7 +98,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'salemcomunidade$CadastroSalem',
+        'NAME': 'mmcastro$CadastroSalem',
         'USER': 'salemcomunidade',
         'PASSWORD': 'salem1404',
         'HOST': 'salemcomunidade.mysql.pythonanywhere-services.com',
