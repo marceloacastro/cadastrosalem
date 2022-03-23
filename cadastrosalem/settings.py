@@ -31,14 +31,16 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'usuarios',
+    'bootstrap4',
+    'core',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'usuarios',
-    'bootstrap4',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -75,13 +77,6 @@ WSGI_APPLICATION = 'cadastrosalem.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-"""""""""
-# Usando PostgreeSQL com Heroku
-DATABASES = {
-    'default': dj_database_url.config()
-}
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -98,14 +93,20 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mmcastro$CadastroSalem',
-        'USER': 'comunidadesalem',
-        'PASSWORD': 'S@lem2022',
-        'HOST': 'mmcastro.mysql.pythonanywhere-services.com',
+        'NAME': 'salemcomunidade$CadastroSalem',
+        'USER': 'salemcomunidade',
+        'PASSWORD': 'salem1404',
+        'HOST': 'salemcomunidade.mysql.pythonanywhere-services.com',
         'PORT': '',
     }
 }
 
+# Usando PostgreeSQL com Heroku
+DATABASES = {
+    'default': dj_database_url.config()
+}
+
+"""""""""
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
