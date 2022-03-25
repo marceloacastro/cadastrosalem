@@ -76,6 +76,19 @@ WSGI_APPLICATION = 'cadastrosalem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'salemcomunidade$CadastroSalem',
+        'USER': 'salemcomunidade',
+        'PASSWORD': 'salem1404',
+        'HOST': 'salemcomunidade.mysql.pythonanywhere-services.com',
+        'PORT': '',
+    }
+}
+
+"""""""""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'CadastroSalem',
         'USER': 'salem',
         'PASSWORD': 'S@lem2022',
@@ -84,22 +97,8 @@ DATABASES = {
     }
 }
 
-
-"""""""""
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'salemcomunidade$CadastroSalem',
-        'USER': 'salemcomunidade',
-        'PASSWORD': 'salem1404',
-        'HOST': 'salemcomunidade.mysql.pythonanywhere-services.com',
-        'PORT': '',
-    }
-}
 
 # Usando PostgreeSQL com Heroku
 DATABASES = {
