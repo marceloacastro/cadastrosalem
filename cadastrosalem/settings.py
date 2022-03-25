@@ -24,16 +24,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-hgx1zcmujv3c7%gv(2im&i#br2uw-u%rk#x(=_c!wmev8cx-dp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # se usarmos o False, usa o staticfiles, se usarmos o True esta me modo de desenvolvimento e usa a pasta static
+DEBUG = True  # se usarmos o False, usa o staticfiles, se usarmos o True esta me modo de desenvolvimento e usa a pasta static
 
 ALLOWED_HOSTS = ['*']
 
 # Application definition
 
 INSTALLED_APPS = [
-    'usuarios',
-    'bootstrap4',
     'core',
+    'bootstrap4',
+    'stdimage',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,13 +76,14 @@ WSGI_APPLICATION = 'cadastrosalem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'salemcomunidade$CadastroSalem',
-        'USER': 'salemcomunidade',
-        'PASSWORD': 'salem1404',
-        'HOST': 'salemcomunidade.mysql.pythonanywhere-services.com',
-        'PORT': '',
+        'NAME': 'CadastroSalem',
+        'USER': 'salem',
+        'PASSWORD': 'S@lem2022',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
+
 
 """""""""
 
@@ -92,11 +93,11 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'CadastroSalem',
-        'USER': 'salem',
-        'PASSWORD': 'S@lem2022',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'salemcomunidade$CadastroSalem',
+        'USER': 'salemcomunidade',
+        'PASSWORD': 'salem1404',
+        'HOST': 'salemcomunidade.mysql.pythonanywhere-services.com',
+        'PORT': '',
     }
 }
 
@@ -134,6 +135,7 @@ LANGUAGE_CODE = 'pt-br'
 TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
+USE_L10N = True
 
 USE_TZ = True
 
@@ -146,10 +148,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #    os.path.join(BASE_DIR, '/static'),
 # ]
 
-MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-AUTH_USER_MODEL = 'usuarios.CustomUsuario'
+#AUTH_USER_MODEL = 'usuarios.CustomUsuario'
 
 LOGIN_REDIRECT_URL = '/admin'
 LOGOUT_REDIRECT_URL = 'index'
@@ -158,3 +160,5 @@ LOGOUT_REDIRECT_URL = 'index'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DATE_INPUT_FORMATS = ["%d/%m/%Y"]

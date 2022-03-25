@@ -1,0 +1,33 @@
+t{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load humanize %}
+{% block content %}
+    <div class="row">
+        <table class="table" table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for visitmembro in visitmembros %}
+                    <tr>
+                        <td>{{ visitmembro.id }} </td>
+                        <td>{{ visitmembro.nome }} </td>
+                        <td>{{ visitmembro.email }} </td>
+                        <td>
+                            <a class="btn btn-warning" href=" {% url 'upd_visitmembro' visitmembro.pk %}">Editar</a>
+                            <a class="btn btn-danger" href="{% url 'del_visitmembro' visitmembro.pk %}">Deletar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="row2">
+        <a class="btn btn-warning" href=" {% url 'add_visitmembro'  %}">Adicionar</a>
+    </div>
+
+{% endblock %}
