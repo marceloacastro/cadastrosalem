@@ -2,11 +2,27 @@ import uuid
 from django.db import models
 from stdimage.models import StdImageField
 
+from django.db.models import Q
+
 
 def get_file_path(_instance, filename):
     ext = filename.split('.')[-1]
     filename = f'{uuid.uuid4()}.{ext}'
     return filename
+
+
+class PostManager(models.Manager):
+    def search(self, query=None):
+        qs = self.get_queryset()
+        if query is not None:
+            or_lookup = (Q(nome__icontains=query) |
+                         Q(primeira_visita__icontains=query) |
+                         Q(data_aniversario__icontains=query) |
+                         Q(slug__icontains=query)
+                         )
+            # distinct() is often necessary with Q lookups
+            qs = qs.filter(or_lookup).distinct()
+        return qs
 
 
 class Departamento(models.Model):
@@ -45,6 +61,8 @@ class VisitMembro(models.Model):
     imagem = StdImageField('Imagem', upload_to=get_file_path,
                            variations={'thumb': (124, 124)}, delete_orphans=True, blank=True)
     departamentos = models.ManyToManyField(Departamento)
+
+    objects = PostManager()
 
     def __str__(self):
         return self.nome

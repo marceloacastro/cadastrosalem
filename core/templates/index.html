@@ -1,7 +1,8 @@
-t{% extends 'base.html' %}
+{% extends 'base.html' %}
 {% load bootstrap4 %}
 {% load humanize %}
 {% block content %}
+
     <div class="row">
         <table class="table" table-striped">
             <thead>
@@ -12,7 +13,7 @@ t{% extends 'base.html' %}
                 </tr>
             </thead>
             <tbody>
-                {% for visitmembro in visitmembros %}
+                {% for visitmembro in page_obj %}
                     <tr>
                         <td>{{ visitmembro.id }} </td>
                         <td>{{ visitmembro.nome }} </td>
@@ -25,9 +26,44 @@ t{% extends 'base.html' %}
                 {% endfor %}
             </tbody>
         </table>
+        {% include 'paginacao.html' %}
     </div>
+    {% bootstrap_javascript jquery='full' %}
+
     <div class="row2">
         <a class="btn btn-warning" href=" {% url 'add_visitmembro'  %}">Adicionar</a>
+        <br>
+        <br>
     </div>
+
+    <h7>Instruções:</h7><br>
+    <h7>Listagem Nome - Colocar uma parte do nome.</h7><br>
+    <h7>Listagem Visitantes - Colocar data da visita no formato 'AAAA-MM-DD'.</h7><br>
+    <h7>Listagem Aniversariantes - Colocar qtde. dias no futuro.</h7>
+
+    <form class="form-inline" action="{% url 'listas'  %}" method="get" >
+        {% csrf_token %}
+        <select name="filter" class="form-control">
+                <option value="tudo">Tudo</option>
+            {% if request.GET.filter == 'nome' %}
+                <option value="nome" selected>Nome</option>
+            {% else %}
+                <option value="nome">Nome</option>
+            {% endif %}
+            {% if request.GET.filter == 'primeira_visita' %}
+                <option value="primeira_visita" selected>Visitantes</option>
+            {% else %}
+                <option value="primeira_visita">Visitantes</option>
+            {% endif %}
+            {% if request.GET.filter == 'skillset' %}
+                <option value="data_aniversario" selected>Aniversariantes</option>
+            {% else %}
+                <option value="data_aniversario">Aniversariantes</option>
+            {% endif %}
+        </select>
+        <input type="text" name="q" placeholder="Entrar Chave" class="form-control">
+        <button type="submit" value="{{ request.GET.q }}" >Ver Listagem<i class="btn btn-warning></i></button>
+    </form>
+
 
 {% endblock %}
