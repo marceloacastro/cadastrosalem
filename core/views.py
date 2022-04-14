@@ -6,13 +6,10 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from psycopg2 import Date
 from itertools import chain
 from django.shortcuts import get_object_or_404, render
 from .models import VisitMembro
 from django.contrib.auth.models import User
-from .filters import UserFilter, VisitanteFilter
-from search_listview.list import SearchableListView
 from datetime import timedelta
 from django.utils import timezone
 

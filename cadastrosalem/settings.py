@@ -76,6 +76,19 @@ WSGI_APPLICATION = 'cadastrosalem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'CadastroSalem',
+        'USER': 'salem',
+        'PASSWORD': 'S@lem2022',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+
+
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'salemcomunidade$CadastroSalem',
         'USER': 'salemcomunidade',
         'PASSWORD': 'salem1404',
@@ -84,18 +97,6 @@ DATABASES = {
     }
 }
 
-"""
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'CadastroSalem',
-        'USER': 'salem',
-        'PASSWORD': 'S@lem2022',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
