@@ -11,20 +11,6 @@ def get_file_path(_instance, filename):
     return filename
 
 
-class PostManager(models.Manager):
-    def search(self, query=None):
-        qs = self.get_queryset()
-        if query is not None:
-            or_lookup = (Q(nome__icontains=query) |
-                         Q(primeira_visita__icontains=query) |
-                         Q(data_aniversario__icontains=query) |
-                         Q(slug__icontains=query)
-                         )
-            # distinct() is often necessary with Q lookups
-            qs = qs.filter(or_lookup).distinct()
-        return qs
-
-
 class Departamento(models.Model):
     departamento = models.CharField(max_length=50, null=False, blank=False)
 
@@ -61,8 +47,6 @@ class VisitMembro(models.Model):
     imagem = StdImageField('Imagem', upload_to=get_file_path,
                            variations={'thumb': (124, 124)}, delete_orphans=True, blank=True)
     departamentos = models.ManyToManyField(Departamento)
-
-    objects = PostManager()
 
     def __str__(self):
         return self.nome

@@ -17,18 +17,6 @@ from datetime import timedelta
 from django.utils import timezone
 
 
-def search(request):
-    user_list = User.objects.all()
-    user_filter = UserFilter(request.GET, queryset=user_list)
-    return render(request, 'search/user_list.html', {'filter': user_filter})
-
-
-def search_visitante(request):
-    visitante_list = VisitMembro.objects.all()
-    visitante_filter = VisitanteFilter(request.GET, queryset=visitante_list)
-    return render(request, 'search/user_list.html', {'filter': visitante_filter})
-
-
 class IndexView(ListView):
     model = VisitMembro
     template_name = 'index.html'
