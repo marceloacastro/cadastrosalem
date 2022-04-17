@@ -50,7 +50,7 @@ function getParameterByName(name, url) {
             {% for visitmembro in visitmembros %}
                 <li>
                     <p><h2>{{ visitmembro.nome }}</h2></p>
-                    <p><h3>Aniversário: {{ visitmembro.data_aniversario }}</h3></p>
+                    <p><h3>Aniversario: {{ visitmembro.data_aniversario.day }} / {{ visitmembro.data_aniversario.month }}</h3></p>
                     <img src="{% get_media_prefix %}{{ visitmembro.imagem }}"   width="150" height="250">
                     <br>
                     <br>

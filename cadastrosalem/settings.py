@@ -76,24 +76,25 @@ WSGI_APPLICATION = 'cadastrosalem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'CadastroSalem',
-        'USER': 'salem',
-        'PASSWORD': 'S@lem2022',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
-
-
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'salemcomunidade$CadastroSalem',
         'USER': 'salemcomunidade',
         'PASSWORD': 'salem1404',
         'HOST': 'salemcomunidade.mysql.pythonanywhere-services.com',
         'PORT': '',
+    }
+}
+
+
+"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'CadastroSalem',
+        'USER': 'salem',
+        'PASSWORD': 'S@lem2022',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -153,7 +154,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 #AUTH_USER_MODEL = 'usuarios.CustomUsuario'
 
-LOGIN_REDIRECT_URL = '/admin'
+LOGIN_REDIRECT_URL = 'menu_inicial'
 LOGOUT_REDIRECT_URL = 'index'
 
 # Default primary key field type

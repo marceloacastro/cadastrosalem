@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load humanize %}
+{% block content %}
+
+    <div class="row">
+        <tbody>
+            <div class="container my-3">
+                <h5>Envio de Mensagens via Whatsapp</h5>
+                <form action="send_whatsapp" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group mt-4">
+                        <label for="Phone">Entre o número do Celular/Contato que vai receber a mensagem:</label>
+                        <input type="Phone" required autofocus class="form-control" name="Phone" id="Phone" aria-describedby="Phone" placeholder="Digite os números do Whatsapp receptor">
+                    </div>
+                    <div class="form-group">
+                        <label for="Message">Entre a mensagem:</label>
+                        <textarea name="Message" id="Message" rows="5" class="form-control" required placeholder="Escreva a mensagem..."></textarea>
+                    </div>
+                    <input class="btn btn-default" type ="submit" value="Send" >
+                    <a href=''/'' class="btn btn-default">Clear</a> {{ msg}}
+                </form>
+            </div>
+        </tbody>
+    </div>
+    {% bootstrap_javascript jquery='full' %}
+
+{% endblock %}
