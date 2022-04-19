@@ -28,7 +28,6 @@
         </table>
         {% include 'paginacao.html' %}
     </div>
-    {% bootstrap_javascript jquery='full' %}
 
     <div class="row2">
         <a class="btn btn-warning" href=" {% url 'add_visitmembro'  %}">Adicionar</a>
@@ -72,5 +71,7 @@
         <br>
         <br>
     </div>
+
+    {% bootstrap_javascript jquery='full' %}
 
 {% endblock %}

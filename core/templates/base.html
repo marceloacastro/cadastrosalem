@@ -1,43 +1,29 @@
 {% load bootstrap4 %}
 {% load static %}
-<script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/base.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/global.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/widgets.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/autocomplete.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/changelists.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/dashboard.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/fonts.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/login.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/nav_sidebar.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive_rtl.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/rtl.css' %}">
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Comunidade Evangélica Salém</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="{% static 'admin/ico/logo.ico' %}">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <link href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css" rel="stylesheet">
-    </head>
-    <body class="text-center">
-        <div class="container">
-            <h1><img class="mb-4" src="http://www.comunidadesalem.com.br/templates/eximium/images/green/logo.png" alt="" width="72" height="72">
-                    Comunidade Evangélica Salém
-                    {% if user.is_anonymous %}
-                    {% else %}
-                        <a class="btn btn-default" href="{% url 'logout' %}">Logout</a>
-                    {% endif %}
+<html lang="pt-br" >
+     <div class="container">
+        <head class="text-center">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <title>Comunidade Evangélica Salém</title>
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <link rel="icon" href="http://www.comunidadesalem.com.br/templates/eximium/images/green/logo.png">
+        </head>
+        <body class="text-center">
+            <h1>
+                <img src="http://www.comunidadesalem.com.br/templates/eximium/images/green/logo.png" width="100" height="100">
+                Comunidade Evangélica Salém
+                {% if user.is_anonymous %}
+                {% else %}
+                    <a class="btn btn-default" href="{% url 'logout' %}">Logout</a>
+                {% endif %}
             </h1>
             <br>
             <h2>Sistema de Cadastro de Membros/Visitantes</h2>
                 {% block content %} {% endblock %}
-        </div>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </body>
+                <script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        </body>
+    </div>
 </html>

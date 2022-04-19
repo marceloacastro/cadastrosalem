@@ -1,39 +1,25 @@
-2022/04/17-14:16:44.264 19fc Reusing MANIFEST C:\Marcelo\ProjetosPython\CadastroSalem\staticfiles\admin\chromedriver\profile\wpp\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/04/17-14:16:44.265 19fc Recovering log #1835
-2022/04/17-14:16:44.306 19fc Reusing old log C:\Marcelo\ProjetosPython\CadastroSalem\staticfiles\admin\chromedriver\profile\wpp\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/001835.log 
-2022/04/17-14:16:44.307 19fc Delete type=2 #1833
-2022/04/17-14:16:44.307 19fc Delete type=2 #1834
-2022/04/17-14:16:44.307 19fc Delete type=2 #1836
-2022/04/17-14:16:44.656 398 Level-0 table #1841: started
-2022/04/17-14:16:44.700 398 Level-0 table #1841: 1372354 bytes OK
-2022/04/17-14:16:44.702 398 Delete type=0 #1835
-2022/04/17-14:16:45.219 3938 Compacting 1@1 + 2@2 files
-2022/04/17-14:16:45.333 3938 Generated table #1842@1: 33057 keys, 2214931 bytes
-2022/04/17-14:16:45.369 3938 Generated table #1843@1: 11917 keys, 1117167 bytes
-2022/04/17-14:16:45.369 3938 Compacted 1@1 + 2@2 files => 3332098 bytes
-2022/04/17-14:16:45.370 3938 compacted to: files[ 0 0 2 0 0 0 0 ]
-2022/04/17-14:16:45.371 3938 Delete type=2 #1837
-2022/04/17-14:16:45.371 3938 Delete type=2 #1838
-2022/04/17-14:16:45.371 3938 Delete type=2 #1841
-2022/04/17-14:16:49.399 398 Level-0 table #1845: started
-2022/04/17-14:16:49.423 398 Level-0 table #1845: 997989 bytes OK
-2022/04/17-14:16:49.424 398 Delete type=0 #1840
-2022/04/17-14:16:49.429 398 Compacting 1@1 + 2@2 files
-2022/04/17-14:16:49.512 398 Generated table #1846@1: 28895 keys, 2211652 bytes
-2022/04/17-14:16:49.583 398 Generated table #1847@1: 13296 keys, 993577 bytes
-2022/04/17-14:16:49.583 398 Compacted 1@1 + 2@2 files => 3205229 bytes
-2022/04/17-14:16:49.584 398 compacted to: files[ 0 0 2 0 0 0 0 ]
-2022/04/17-14:16:51.361 437c Level-0 table #1849: started
-2022/04/17-14:16:51.384 437c Level-0 table #1849: 1010173 bytes OK
-2022/04/17-14:16:51.386 437c Delete type=2 #1842
-2022/04/17-14:16:51.386 437c Delete type=2 #1843
-2022/04/17-14:16:51.386 437c Delete type=0 #1844
-2022/04/17-14:16:51.386 437c Delete type=2 #1845
-2022/04/17-14:16:51.926 2ac0 Compacting 1@1 + 2@2 files
-2022/04/17-14:16:51.993 2ac0 Generated table #1850@1: 28084 keys, 2216199 bytes
-2022/04/17-14:16:52.015 2ac0 Generated table #1851@1: 15790 keys, 879683 bytes
-2022/04/17-14:16:52.015 2ac0 Compacted 1@1 + 2@2 files => 3095882 bytes
-2022/04/17-14:16:52.017 2ac0 compacted to: files[ 0 0 2 0 0 0 0 ]
-2022/04/17-14:16:52.017 2ac0 Delete type=2 #1846
-2022/04/17-14:16:52.017 2ac0 Delete type=2 #1847
-2022/04/17-14:16:52.017 2ac0 Delete type=2 #1849
+2022/04/17-14:20:04.553 bec Reusing MANIFEST C:\Marcelo\ProjetosPython\CadastroSalem\staticfiles\admin\chromedriver\profile\wpp\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/04/17-14:20:04.554 bec Recovering log #1848
+2022/04/17-14:20:04.575 bec Reusing old log C:\Marcelo\ProjetosPython\CadastroSalem\staticfiles\admin\chromedriver\profile\wpp\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/001848.log 
+2022/04/17-14:20:11.644 664 Level-0 table #1854: started
+2022/04/17-14:20:11.681 664 Level-0 table #1854: 1105375 bytes OK
+2022/04/17-14:20:11.683 664 Delete type=0 #1848
+2022/04/17-14:20:11.714 1c60 Compacting 1@1 + 2@2 files
+2022/04/17-14:20:11.823 1c60 Generated table #1855@1: 32568 keys, 2222172 bytes
+2022/04/17-14:20:11.884 1c60 Generated table #1856@1: 23640 keys, 1348934 bytes
+2022/04/17-14:20:11.884 1c60 Compacted 1@1 + 2@2 files => 3571106 bytes
+2022/04/17-14:20:11.885 1c60 compacted to: files[ 0 0 2 0 0 0 0 ]
+2022/04/17-14:20:12.573 20ec Level-0 table #1858: started
+2022/04/17-14:20:12.602 20ec Level-0 table #1858: 996580 bytes OK
+2022/04/17-14:20:12.604 20ec Delete type=2 #1850
+2022/04/17-14:20:12.604 20ec Delete type=2 #1851
+2022/04/17-14:20:12.604 20ec Delete type=0 #1853
+2022/04/17-14:20:12.604 20ec Delete type=2 #1854
+2022/04/17-14:20:12.613 20ec Compacting 1@1 + 2@2 files
+2022/04/17-14:20:12.712 20ec Generated table #1859@1: 33603 keys, 2220717 bytes
+2022/04/17-14:20:12.768 20ec Generated table #1860@1: 26441 keys, 1739398 bytes
+2022/04/17-14:20:12.768 20ec Compacted 1@1 + 2@2 files => 3960115 bytes
+2022/04/17-14:20:12.769 20ec compacted to: files[ 0 0 2 0 0 0 0 ]
+2022/04/17-14:20:12.769 20ec Delete type=2 #1855
+2022/04/17-14:20:12.769 20ec Delete type=2 #1856
+2022/04/17-14:20:12.770 20ec Delete type=2 #1858

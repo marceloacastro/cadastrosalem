@@ -84,7 +84,6 @@ DATABASES = {
     }
 }
 
-
 """
 
 DATABASES = {
@@ -97,7 +96,6 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
