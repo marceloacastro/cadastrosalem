@@ -3,22 +3,55 @@
 {% load humanize %}
 {% load static %}
 {% block content %}
-    <span id='topo'></span>
-    <div class="page">
-        <ul>
-            {% if visitmembros.count > 0 %}
-                {% for visitmembro in visitmembros %}
-                    <li>
-                        <br>
-                        <br>
-                        <h2>{{ visitmembro.nome }}</h2>
-                        <h3>Aniversario: {{ visitmembro.data_aniversario.day }} / {{ visitmembro.data_aniversario.month }}</h3>
-                        <img src="{% get_media_prefix %}{{ visitmembro.imagem }}"   width="150" height="250">
-                    </li>
-                {% endfor %}
-            {% else %}
-                <h3>Infelizmente, hoje não tivemos lista.</h3>
-            {% endif %}
-        </ul>
-    </div>
+<div id="current_date"></p>
+    <br>
+    <br>
+    <h2>
+        <script>
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, '\\$&');
+                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+
+            var v_filter = getParameterByName('filter');
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDate();
+
+            if (v_filter == "tudo") {
+            v_listagem = "Geral - ";
+            } else if (v_filter == "data_aniversario") {
+            v_listagem = "de Aniversariantes - ";
+            } else if  (v_filter == "primeira_visita") {
+            v_listagem = "de Visitantes - ";
+            } else {
+            v_listagem = "por Nomes - ";
+            }
+            document.getElementById("current_date").innerHTML = "Listagem " + v_listagem +  day + "/" +  month   + "/" + year;
+            document.getElementById("current_date").style.fontSize = "xx-large";
+            document.getElementById("current_date").style.wordSpacing = "10px"
+        </script>
+    </h2>
+    <ul>
+        {% if visitmembros.count > 0 %}
+            {% for visitmembro in visitmembros %}
+                <li>
+                    <br>
+                    <br>
+                    <h2>{{ visitmembro.nome }}</h2>
+                    <h3>Aniversario: {{ visitmembro.data_aniversario.day }} / {{ visitmembro.data_aniversario.month }}</h3>
+                    <img src="{% get_media_prefix %}{{ visitmembro.imagem }}"   width="150" height="250">
+                </li>
+            {% endfor %}
+        {% else %}
+            <h3>Infelizmente, hoje não tivemos lista.</h3>
+        {% endif %}
+    </ul>
+</div>
 {% endblock %}
